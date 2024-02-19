@@ -1,9 +1,5 @@
-import express from "express";
+import { app } from "./app.js";
 import connectDB from "./data-base/index.js";
-import {
-  app
-} from "./app.js"
-
 
 connectDB()
   .then(() => {
