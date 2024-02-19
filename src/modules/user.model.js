@@ -53,7 +53,7 @@ userSchema.pre("save", async function (next) {
   next();
 });
 userSchema.methods.isPasswordCorrect = async function (password) {
-  bcrypy.compare(password, this.password);
+  await bcrypy.compare(password, this.password);
 };
 userSchema.methods.generateAccessToken = async function () {
   jwt.sign(
